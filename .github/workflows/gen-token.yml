@@ -1,0 +1,7 @@
+name: GHA token generator
+on:
+  schedule:
+    - cron: '35 */6 * * 1-5'
+
+jobs:
+  gen-jwt:
