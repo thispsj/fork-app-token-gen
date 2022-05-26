@@ -5,3 +5,14 @@ on:
 
 jobs:
   gen-jwt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate JWT & Update app token.
+        id: gen-jwt
+        run: ' echo wait '
+        env:
+          PRIV_KEY: ${{ secrets.GH_APP_PEM_KEY }}
+          APP_ID: ${{ secrets.GH_APPID }}
+          PAT: ${{ secrets.GH_PAT }} # Expires on Sat, Aug 6 2022.
+          REPO_PUBLIC_KEY: ${{ secrets.SECRET_PUBLIC_KEY }}
+          KEY_ID: ${{ secrets.SECRET_PUBLIC_KEY_ID }}
