@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PEM=$( echo $PRIV_KEY )
-GITHUB_APP_ID=198558 # Whatever your github app id is
+GITHUB_APP_ID=$APP_ID # Whatever your github app id is
 
 NOW=$( date +%s )
 IAT="${NOW}"
