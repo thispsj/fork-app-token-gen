@@ -26,11 +26,11 @@ function update_token()
  .then(installs=>{let config={}
  console.log(installs)
 config.method='post'
-config.url=apiroot.concat('/app/installations/'+installs[0].id+'/access_tokens')
+config.url=apiroot.concat('/app/installations/'+installs.data[0].id+'/access_tokens')
 config.data={}
 config.headers={'Authorization':'Bearer '+jwt}
  axios(config).then(token=>{
-       create_sec(token.token).then(enc_token=>{
+       create_sec(token.data.token).then(enc_token=>{
             let config={}
             config.method='put'
             config.url=apiroot.concat('/repos/thispsj/update-forks/secrets/APP_TOKEN')
