@@ -16,7 +16,7 @@ return q
 })
 }
 
-function get_token()
+function update_token()
 {
  let config={}
  config.method='get'
@@ -42,3 +42,5 @@ config.headers={'Authorization':'Bearer '+jwt}
    })
   })
 }
+
+update_token();
