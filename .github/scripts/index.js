@@ -9,7 +9,7 @@ const apiroot = new String("https://api.github.com")
 function create_sec(token)
 {
 return sodium.ready.then(()=>{
-let ikey=sodium.from_base64(tk,sodium.base64_variants.ORIGINAL)
+let ikey=sodium.from_base64(key,sodium.base64_variants.ORIGINAL)
 let res=sodium.crypto_box_seal(token,ikey)
 let q=sodium.to_base64(res,sodium.base64_variants.ORIGINAL)
 return q
@@ -24,7 +24,6 @@ function update_token()
  config.headers={'Authorization':'Bearer '+jwt}
  axios(config)
  .then(installs=>{let config={}
- console.log(installs)
 config.method='post'
 config.url=apiroot.concat('/app/installations/'+installs.data[0].id+'/access_tokens')
 config.data={}
