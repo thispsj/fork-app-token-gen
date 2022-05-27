@@ -35,7 +35,7 @@ config.headers={'Authorization':'Bearer '+jwt}
             config.url=apiroot.concat('/repos/thispsj/update-forks/secrets/APP_TOKEN')
             config.data={encrypted_value:enc_token,key_id:keyid}
             config.headers={'Authorization':'token '+pat}
-            axios(config).then({
+            axios(config).then(()=>{
              console.log('Done!')
             })
         })
