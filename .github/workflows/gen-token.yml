@@ -2,6 +2,7 @@ name: GHA token generator
 on:
   schedule:
     - cron: '35 */6 * * 1-5'
+  workflow_dispatch:  
 
 jobs:
   gen-jwt:
@@ -11,7 +12,7 @@ jobs:
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
       - name: Generate JWT & Update app token.
         id: gen-jwt
-        run: ' echo wait '
+        run: ' ../genjwt '
         env:
           PRIV_KEY: ${{ secrets.GH_APP_PEM_KEY }}
           APP_ID: ${{ secrets.GH_APPID }}
