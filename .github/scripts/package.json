@@ -1,0 +1,26 @@
+{
+  "name": "token-update",
+  "version": "1.0.0",
+  "description": "Scripts to update tokens.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thispsj/fork-app-token-gen.git"
+  },
+  "keywords": [
+    "github-api"
+  ],
+  "author": "PSJ <51746608+thispsj@users.noreply.github.com> (https://github.com/thispsj)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thispsj/fork-app-token-gen/issues"
+  },
+  "homepage": "https://github.com/thispsj/fork-app-token-gen#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "libsodium-wrappers": "^0.7.10"
+  }
+}
