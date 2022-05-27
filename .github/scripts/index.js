@@ -25,7 +25,7 @@ function update_token()
  axios(config)
  .then(installs=>{let config={}
 config.method='post'
-config.url=apiroot.concat('/app/installations/'+installs[0].id+'/access_tokens'
+config.url=apiroot.concat('/app/installations/'+installs[0].id+'/access_tokens')
 config.data={}
 config.headers={'Authorization':'Bearer '+jwt}
  axios(config).then(token=>{
