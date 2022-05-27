@@ -14,4 +14,4 @@ HEADER_PAYLOAD="${HEADER}"."${PAYLOAD}"
 SIGNATURE=$( openssl dgst -sha256 -sign <(echo -n "${PEM}") <(echo -n "${HEADER_PAYLOAD}") | openssl base64 | tr -d '=' | tr '/+' '_-' | tr -d '\n' )
 JWT="${HEADER_PAYLOAD}"."${SIGNATURE}"
 
-node ./index.js ${JWT}
+node ./scripts/index.js ${JWT}
