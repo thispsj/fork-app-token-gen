@@ -16,6 +16,6 @@ jobs:
         env:
           PRIV_KEY: ${{ secrets.GH_APP_PEM_KEY }}
           APP_ID: ${{ secrets.GH_APPID }}
-          PAT: ${{ secrets.GH_PAT }} 
+          PAT: ${{ secrets.GH_PAT_BETA }} 
           REPO_PUBLIC_KEY: ${{ secrets.SECRET_PUBLIC_KEY }}
           KEY_ID: ${{ secrets.SECRET_PUBLIC_KEY_ID }}
