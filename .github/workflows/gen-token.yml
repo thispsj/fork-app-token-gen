@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@e2f20e631ae6d7dd3b768f56a5d2af784dd54791
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
       - name: Generate JWT & Update app token.
         id: gen-jwt
         run: ' ./.github/genjwt '
