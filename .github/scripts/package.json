@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/thispsj/fork-app-token-gen#readme",
   "dependencies": {
-    "axios": "^1.7.3",
+    "axios": "^1.7.5",
     "libsodium-wrappers": "^0.7.13"
   }
 }
